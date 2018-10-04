@@ -32,8 +32,8 @@ X = [ones(m, 1) X];
 
 
 sig = sigmoid(X * all_theta');
-[maxSig, maxSig_2] = max(sig');
-p = maxSig_2';
+[maxSig, maxSig_2] = max(sig, [], 2);
+p = maxSig_2;
 
 
 

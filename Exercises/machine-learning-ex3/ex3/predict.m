@@ -26,8 +26,8 @@ p = zeros(size(X, 1), 1);
 temp1 = [ones(m, 1) X];
 temp2 = [ones(m, 1) sigmoid(temp1 * Theta1')];
 temp3 = sigmoid(temp2 * Theta2');
-[maxTemp3, maxTemp3_2] = max(temp3');
-p = maxTemp3_2';
+[maxTemp3, maxTemp3_2] = max(temp3, [], 2);
+p = maxTemp3_2;
 
 
 
